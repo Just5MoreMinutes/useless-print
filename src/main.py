@@ -140,6 +140,12 @@ def replace(item):
             col = PRESETS[i]
     return col
 
+def extract(txt):
+    col = re.findall(r'\[(.*?)\]', txt)
+    b_i = re.findall(r'\*\*?(.*?)\*\*?', txt)
+    und = re.findall(r'__(.*?)__', txt)
+    cut = re.findall(r'~~(.*?)~~', txt)
+
 @uprint_func
 def uprint(txt):
 
